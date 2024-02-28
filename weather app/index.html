@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>weather Api</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="apphed">Weather App</h1>
+
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+
+      <div class="weaather-container">
+        <!-- Grant location  -->
+        <div class="grant-loc-con">
+          <img
+            src="./Images/location.png"
+            width="80 "
+            height="80"
+            loading="lazy"
+            alt=""
+          />
+          <p>Geant location Access</p>
+          <p>Give access to get weather information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+        <!--  search weather -->
+        <form class="form-container" data-searchForm>
+          <input placeholder="search for city .... " data-searchInput />
+          <button class="btn" type="submit">
+            <img src="./Images/search.png" width="12" height="20" />
+          </button>
+        </form>
+        <!-- lodaing weather  -->
+        <div class="loading-container">
+          <img src="./Images/loading.gif" width="150" height="150" alt="" />
+        </div>
+
+        <!-- main weather info show -->
+        <div class="user-info">
+          <!-- city name and flag -->
+          <div class="name">
+            <p data-cityName></p>
+            <img data-countryFlag />
+          </div>
+          <!-- weather info -->
+          <p data-weatherDesc></p>
+          <img data-weatherIcon />
+          <p data-temp></p>
+          <!-- 3 divs  humidty wind speed -->
+          <div class="parameter-container">
+            <!-- 1 -->
+
+            <div class="parameter">
+              <img src="./Images/wind.png" />
+              <p>windspeed</p>
+              <p data-wind></p>
+            </div>
+            <!-- 2 -->
+            <div class="parameter">
+              <img src="./Images/humidity.png" />
+              <p>humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <!-- 3 -->
+            <div class="parameter">
+              <img src="./Images/cloud.png" />
+              <p>clouds</p>
+              <p data-cloud></p>
+            </div>
+          </div>
+        </div>
+        <div class="errorContainer subContainer">
+          <img src="./Images/not-found.png" data-errorImg />
+          <p data-errorText></p>
+          <button class="btn" data-errorButton>Retry Now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
