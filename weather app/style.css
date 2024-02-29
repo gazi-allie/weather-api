@@ -14,20 +14,17 @@
   --colorLight2:#F9F7F7;
 }     
 
-
-
-
-
-
-.tab.current-tab {
-  /* background-color: rgba(219, 236, 230, 8.5); */
-  background-color: green;
-  border-radius: 4px;
-  cursor: pointer;
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+ color: var(--colorLight2);
+ background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100%);
+ align-items: center;
 }
-.form-container.active {
-  scale: 1;
-  opacity: 1;
-  background-color: blueviolet;
+
+h1{
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3rem;
 }
 
