@@ -138,6 +138,7 @@ async function fetchSearchWeatherInfo(city) {
     userInfo.classList.remove("active");
     notFound.classList.remove("active");
     grantAccessCont.classList.remove("active");
+    
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`
