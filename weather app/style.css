@@ -7,24 +7,215 @@
   font-family: 'Merriweather', 'sans-serif';
 }
 
-:root{
-  --colorDark1:#112D4E;
-  --colorDark2:#3F72AF;
-  --colorLight1:#DBE2EF;
-  --colorLight2:#F9F7F7;
-}     
-
-.wrapper{
-  width: 100vw;
-  height: 100vh;
- color: var(--colorLight2);
- background-image: linear-gradient(160deg,#112d4e 0%,#3f72af 100%);
- align-items: center;
+:root {
+  --colorDark1: #112d4e;
+  --colorDark2: #3f72af;
+  --colorLight1: #dbe2ef;
+  --colorLight2: #f9f7f7;
 }
 
-h1{
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  color: var(--colorLight2);
+  background-color: #112d4e;
+  background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+  align-items: center;
+}
+
+h1 {
   text-align: center;
   text-transform: uppercase;
   padding: 3rem;
 }
 
+.tab-container {
+  width: 90%;
+  max-width: 550px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 2rem;
+  align-items: center;
+
+}
+
+.tab {
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 1.75px;
+  padding: 5px 8px;
+  text-transform: capitalize;
+  /* font-weight: 600; */
+}
+
+.tab.current-tab {
+  /* background-color: rgba(219, 236, 230, 8.5); */
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.weaather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 4rem;
+}
+.btn {
+  /* color: white; */
+  all: unset;
+
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: beige;
+  border-radius: 5px;
+  background-color: var(--colorDark2);
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grant-loc-con {
+  display: none;
+}
+/* adding when active is calledd */
+.grant-loc-con.active {
+  display: flex;
+}
+
+.grant-loc-con img {
+  margin-bottom: 2rem;
+}
+.grant-loc-con p:first-of-type {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.grant-loc-con p:last-of-type {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.75px;
+}
+/* lodingg */
+.loading-container {
+  display: none;
+}
+.loading-container.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-container p {
+  text-transform: uppercase;
+}
+.form-container {
+  display: none;
+}
+.form-container.active {
+  display: flex;
+}
+.user-info {
+  display: none;
+}
+.user-info.active {
+  display: flex;
+}
+.name {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+.name p {
+  font-size: 2rem;
+}
+.user-info img{
+
+  width: 90px;
+  height:90px;
+
+}
+.name img {
+  width: 35px;
+  height: 30px;
+  object-fit: contain;
+   
+}
+.user-info p{
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.user-info p[data-temp]{
+font-size: 2.75rem;
+
+}
+.parameter-container{
+  display: flex;
+  gap: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  
+}
+.parameter{
+  width: 30%;
+  max-width: 200px;
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius:5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.parameter img{
+  width: 50px;
+  height: 50px;
+
+}
+.parameter p:first-of-type{
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.parameter p:last-of-type{ 
+  font-size: 1rem;
+  font-weight: 200;
+
+}
+
+.form-container{
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+}
+.form-container.acvtive{
+  display:flex;
+
+}
+.form-container input{
+  all: unset;
+  width: calc(100% - 80%);
+  height: 40px;
+  padding: 0 20px;
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 10px;
+}

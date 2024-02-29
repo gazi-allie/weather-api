@@ -24,7 +24,7 @@
 
       <div class="weaather-container">
         <!-- Grant location  -->
-        <div class="grant-loc-con">
+        <div class="sub-container grant-loc-con">
           <img
             src="./Images/location.png"
             width="80 "
@@ -32,24 +32,26 @@
             loading="lazy"
             alt=""
           />
-          <p>Geant location Access</p>
+          <p>Geant Location Access</p>
           <p>Give access to get weather information</p>
+
           <button class="btn" data-grantAccess>Grant Access</button>
         </div>
         <!--  search weather -->
         <form class="form-container" data-searchForm>
-          <input placeholder="search for city .... " data-searchInput />
+          <input placeholder="  search for city .... " data-searchInput />
           <button class="btn" type="submit">
             <img src="./Images/search.png" width="12" height="20" />
           </button>
         </form>
         <!-- lodaing weather  -->
-        <div class="loading-container">
+        <div class=" sub-container loading-container">
           <img src="./Images/loading.gif" width="150" height="150" alt="" />
+          <p>lodaing....</p>
         </div>
 
         <!-- main weather info show -->
-        <div class="user-info">
+        <div class=" sub-container user-info">
           <!-- city name and flag -->
           <div class="name">
             <p data-cityName></p>
@@ -83,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="errorContainer subContainer">
+        <div class="sub-container errorContainer ">
           <img src="./Images/not-found.png" data-errorImg />
           <p data-errorText></p>
           <button class="btn" data-errorButton>Retry Now</button>
