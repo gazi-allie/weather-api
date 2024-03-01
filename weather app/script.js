@@ -57,7 +57,7 @@ function getfromSessionStorage() {
     }
 }
 async function fetchUserWeather(coordinates) {
-   const { lat, lon } = coordinates;
+    const { lat, lon } = coordinates;
     grantAccessCont.classList.remove("active");
     loadingCon.classList.add("active");
     try {
@@ -92,10 +92,10 @@ function renderWeatherInfo(weatherInfo) {
     const clouds = document.querySelector("[data-cloud]");
     // fetch values of the city
     cityName.innerText = weatherInfo?.name;
-    if (cityName.innerText==="gaza"){
+    if (cityName.innerText === "gaza") {
         console.log("genocide");
-    document.querySelector(".gaza").innerText = " it is bombing in gaza stop genocide";
-        
+        document.querySelector(".gaza").innerText = " it is bombing in gaza stop genocide";
+
     }
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
@@ -134,9 +134,9 @@ searchForm.addEventListener("submit", (e) => {
     let city = searchInput.value;
     if (city === "") { return; }
     else
-    
+
         fetchSearchWeatherInfo(city);
-     
+
     searchInput.value = "";
 });
 
@@ -157,7 +157,7 @@ async function fetchSearchWeatherInfo(city) {
         loadingCon.classList.remove("active");
         userInfo.classList.add("active");
         renderWeatherInfo(data);
-       
+
     }
     catch (err) {
         loadingCon.classList.remove('active');
