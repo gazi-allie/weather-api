@@ -229,4 +229,25 @@ h1 {
   border-radius: 100%;
   margin-bottom: 1px;
 }
+.errorContainer{
+  display: none;
+  width: 90%;
+  max-width: 550px;
+  align-items: center;
+  justify-content: center;
 
+
+}
+.errorContainer.active{
+  display: flex;
+
+}
+.errorContainer img{
+  width: 400px;
+}
+.errorContainer .btn{
+  width: fit-content;
+}
+.errorContainer p{
+  font-size: 1.87rem;
+}

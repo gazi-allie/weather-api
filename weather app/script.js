@@ -92,6 +92,11 @@ function renderWeatherInfo(weatherInfo) {
     const clouds = document.querySelector("[data-cloud]");
     // fetch values of the city
     cityName.innerText = weatherInfo?.name;
+    if (cityName.innerText==="gaza"){
+        console.log("genocide");
+    document.querySelector(".gaza").innerText = " it is bombing in gaza stop genocide";
+        
+    }
     countryIcon.src = `https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     desc.innerText = weatherInfo?.weather?.[0]?.description;
     weathrIcon.src = `http://openweathermap.org/img/w/${weatherInfo?.weather?.[0]?.icon}.png`;
@@ -129,7 +134,9 @@ searchForm.addEventListener("submit", (e) => {
     let city = searchInput.value;
     if (city === "") { return; }
     else
+    
         fetchSearchWeatherInfo(city);
+     
     searchInput.value = "";
 });
 
@@ -138,7 +145,7 @@ async function fetchSearchWeatherInfo(city) {
     userInfo.classList.remove("active");
     notFound.classList.remove("active");
     grantAccessCont.classList.remove("active");
-    
+
     try {
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`
@@ -150,6 +157,7 @@ async function fetchSearchWeatherInfo(city) {
         loadingCon.classList.remove("active");
         userInfo.classList.add("active");
         renderWeatherInfo(data);
+       
     }
     catch (err) {
         loadingCon.classList.remove('active');
